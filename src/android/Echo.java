@@ -27,7 +27,6 @@ public class Echo extends CordovaPlugin  {
 			} catch (JSONException e) {
 
 				Log.e(TAG, "execute: Got JSON Exception " + e.getMessage());
-				result = false;
 				callbackContext.error(e.getMessage());
 
 			}
