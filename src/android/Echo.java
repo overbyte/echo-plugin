@@ -14,6 +14,8 @@ public class Echo extends CordovaPlugin  {
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+		Log.i(TAG, "excecute function ran with action: " + action);
+		
 		if (ACTION_ECHO.equals(action)) {
 
 			Log.v(TAG, "execute: action=" + action);
