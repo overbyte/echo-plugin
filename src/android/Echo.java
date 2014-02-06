@@ -37,10 +37,10 @@ public class Echo extends CordovaPlugin  {
 		return false;
 	}
 
-	private void echo(String message, CallbackContext callbackContext) {
+	private void echo(final String message, final CallbackContext callbackContext) {
 		Log.i(TAG, "echo(): " + message);
 
-		cordova.getThreadPool().excecute(new Runnable() {
+		cordova.getThreadPool().execute(new Runnable() {
 			public void run() {
 				if (message != null && message.length() > 0) {
 					callbackContext.success(message);
