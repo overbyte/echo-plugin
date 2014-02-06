@@ -18,7 +18,7 @@ public class Echo extends CordovaPlugin  {
 		
 		if (ACTION_ECHO.equals(action)) {
 
-			Log.v(TAG, "execute: action=" + action);
+			Log.v(TAG, "execute: action: " + action);
 
 			try {
 
@@ -38,11 +38,17 @@ public class Echo extends CordovaPlugin  {
 	}
 
 	private void echo(String message, CallbackContext callbackContext) {
-		if (message != null && message.length() > 0) {
-			callbackContext.success(message);
-		} else {
-			callbackContext.error("Expected one non-empty string argument.");
-		}
+		Log.i(TAG, "echo(): " + message);
+
+		cordova.getThreadPool().excecute(new Runnable() {
+			public void run() {
+				if (message != null && message.length() > 0) {
+					callbackContext.success(message);
+				} else {
+					callbackContext.error("Expected one non-empty string argument.");
+				}
+			}
+		});
 	}
 
 }
