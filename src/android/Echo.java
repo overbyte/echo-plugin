@@ -1,4 +1,4 @@
-package com.publicislondon.plugins.convchecker;
+package com.publicislondon.plugins.echo;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
