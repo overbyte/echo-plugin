@@ -1,6 +1,6 @@
 //'use strict';
 
-var echo = function () {
+var echo = function (str) {
 	console.log('Conversation Checker is here');
 
 	//window.echo = function(str, callback) {
