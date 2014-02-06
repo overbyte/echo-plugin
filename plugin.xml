@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.publicislondon.plugins.echo" version="0.0.1">
-    <name>Device</name>
+    <name>Echo</name>
     <description>Echo Plugin</description>
     <license>Apache 2.0</license>
     <keywords>echo</keywords>
+
     <js-module src="www/echo.js" name="echo">
         <clobbers target="echo" />
     </js-module>
@@ -15,6 +16,9 @@
             <feature name="Echo" >
                 <param name="android-package" value="com.publicislondon.plugins.echo.Echo"/>
             </feature>
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="plugins">
+            <plugin name="Echo" value="com.publicislondon.plugins.echo.Echo"/>
         </config-file>
 
         <source-file src="src/android/Echo.java" target-dir="src/com/publicislondon/plugins/echo" />
