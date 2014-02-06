@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 /*var echo = function () {
 	console.log('Conversation Checker is here');
